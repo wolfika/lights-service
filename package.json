@@ -17,6 +17,11 @@
 		"node": ">= 8"
 	},
 	"main": "index.js",
+	"xo": {
+		"rules": {
+			"unicorn/custom-error-definition": 0
+		}
+	},
 	"dependencies": {
 		"micro": "^9.0.2",
 		"micro-post": "^1.0.0",

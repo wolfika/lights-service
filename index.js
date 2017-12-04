@@ -7,7 +7,7 @@ module.exports = post(async (req, res) => {
 	try {
 		const body = await json(req);
 
-		if (!body || !Object.keys(body).length) {
+		if (!body || Object.keys(body).length < 1) {
 			throw new MalformattedCommandSyntaxError('Could not parse command from request');
 		}
 
@@ -27,9 +27,9 @@ module.exports = post(async (req, res) => {
 	} catch (err) {
 		if (err instanceof APIError) {
 			return send(res, err.statusCode, err.body);
-		} else {
-			console.error(err);
-			return send(res, 500, {error: 'Unkown error occured, please try again later'});
 		}
+
+		console.error(err);
+		return send(res, 500, {error: 'Unkown error occured, please try again later'});
 	}
 });
