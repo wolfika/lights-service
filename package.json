@@ -1,0 +1,31 @@
+{
+	"name": "lights-service",
+	"description": "Microservice used to abstract the control of Milight lights",
+	"version": "0.0.1",
+	"license": "MIT",
+	"author": {
+		"name": "Máté Farkas",
+		"email": "info@wolfika.eu",
+		"url": "http://wolfika.eu"
+	},
+	"scripts": {
+		"dev": "micro-dev",
+		"start": "micro",
+		"test": "xo"
+	},
+	"engines": {
+		"node": ">= 8"
+	},
+	"main": "index.js",
+	"dependencies": {
+		"micro": "^9.0.2",
+		"micro-post": "^1.0.0",
+		"milight": "^1.0.0",
+		"onecolor": "^3.0.5"
+	},
+	"devDependencies": {
+		"ava": "^0.24.0",
+		"micro-dev": "^1.4.0",
+		"xo": "^0.18.2"
+	}
+}
