@@ -11,7 +11,7 @@
 	"scripts": {
 		"dev": "micro-dev",
 		"start": "micro -p ${PORT:-3000}",
-		"test": "xo"
+		"test": "xo && ava test/**/*.test.js"
 	},
 	"engines": {
 		"node": ">= 8"
