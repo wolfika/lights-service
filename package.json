@@ -19,7 +19,8 @@
 	"main": "index.js",
 	"xo": {
 		"rules": {
-			"unicorn/custom-error-definition": 0
+			"unicorn/custom-error-definition": 0,
+			"import/no-unresolved": 0
 		}
 	},
 	"nyc": {
