@@ -19,8 +19,7 @@
 	"main": "index.js",
 	"xo": {
 		"rules": {
-			"unicorn/custom-error-definition": 0,
-			"capitalized-comments": 0
+			"unicorn/custom-error-definition": 0
 		}
 	},
 	"nyc": {
