@@ -1,6 +1,6 @@
 {
 	"name": "lights-service",
-	"description": "Microservice used to abstract the control of Milight lights",
+	"description": "Node.js microservice used to serve as a clean RESTful interface to Milight lights",
 	"version": "0.0.1",
 	"license": "MIT",
 	"author": {
