@@ -1,4 +1,4 @@
-# lights-service
+# lights-service [![Build Status](https://travis-ci.org/wolfika/lights-service.svg?branch=master)](https://travis-ci.org/wolfika/lights-service) [![codecov](https://codecov.io/gh/wolfika/lights-service/badge.svg?branch=master)](https://codecov.io/gh/wolfika/lights-service?branch=master)
 
 > Node.js microservice used to serve as a clean RESTful interface to Milight lights
 
