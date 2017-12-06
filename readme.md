@@ -27,6 +27,16 @@ $ PORT=8000 yarn start
 
 The default port is 3000.
 
+### Lamps
+
+The service, by default, starts to look for the Milight lamps at `255.255.255.255:8899`. You can override this easily using the `LIGHTS_ADDRESS` and `LIGHTS_PORT` environment variables. For example:
+
+```
+$ LIGHTS_ADDRESS=192.168.0.121 LIGHTS_PORT=8888 yarn start
+```
+
+The service uses the `node-milight` to abstract away actual hardware communication, but, should the need arise to, this can be easily swapped with another implementation. See `lib/lights.js` source for details.
+
 ## Usage
 
 After starting the service, you can send HTTP POST requests to the root URL. The request body must contain at least one valid commmand. See Commands section below, to get more details on how commands work.
