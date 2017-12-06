@@ -1,9 +1,12 @@
 const {json, send} = require('micro');
 const post = require('micro-post');
+const rateLimit = require('micro-ratelimit');
+const auth = require('./lib/auth');
 const lights = require('./lib/lights');
+const keyDb = require('./keys.json');
 const {APIError, MalformattedCommandSyntaxError} = require('./lib/errors');
 
-module.exports = post(async (req, res) => {
+const app = async (req, res) => {
 	try {
 		const body = await json(req);
 
@@ -32,4 +35,13 @@ module.exports = post(async (req, res) => {
 		console.error(err);
 		return send(res, 500, {error: 'Unkown error occured, please try again later'});
 	}
-});
+};
+
+const authConfig = {keyDb};
+
+const rateLimitConfig = {
+	window: 10000,
+	limit: 5
+};
+
+module.exports = auth(authConfig, rateLimit(rateLimitConfig, post(app)));
